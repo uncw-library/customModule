@@ -1,5 +1,33 @@
 # CustomModule
 
+## UNCW NOTES
+
+
+    git clone https://github.com/uncw-library/customModule
+    git checkout 01UNCSL_UNCW-DEV01
+
+
+EDIT ./build-settings.env to:
+
+    INST_ID=01UNCSL_UNCW
+    VIEW_ID=DEV01
+
+
+
+EDIT ./proxy/proxy.const.mjs to:
+    
+    const environments = {
+        'example': 'https://uncw.primo.exlibrisgroup.com',
+    }
+  
+    export const PROXY_TARGET = environments['example']; 
+
+
+View site in Chrome with installed extension Angular DevTools
+  at:  http://localhost:4201/nde/home?vid=01UNCSL_UNCW:DEV01
+
+
+
 ## ✨ New Feature (9th November 2025): Support for all customization files in assets folder:
 All files that are you are able to customize through the assets folder of your customization package are now supported for preview when using the custom module in proxy mode.
 
