@@ -1,3 +1,5 @@
+// SASS format
+
 @use "src/app/styles/nde-variables" as vars;
 @use "src/app/styles/nde-mixing" as mixing;
 
