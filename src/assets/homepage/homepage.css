@@ -15,7 +15,6 @@
     width: 100%;
   }
 
-
   .menu-container {
     .menu {
       display: grid;
@@ -25,6 +24,8 @@
       li {
 
         a {
+          color: #000 !important;
+          text-decoration: underline !important;
           background-color: var(--sys-inverse-on-surface);
           display: flex;
           padding: 1rem;
@@ -37,6 +38,11 @@
           cursor: pointer;
           height: 100%;
 
+          &:hover {
+            color: #002d5b !important;
+            text-decoration: none !important;
+          }
+
           @include mixing.respond-to('large', 'xlarge') {
 
             &:hover, &:focus {
@@ -44,9 +50,6 @@
             box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
             transform: translateY(-1.1875rem);
           }
-
-          }
-
 
 
           .icon {
@@ -93,6 +96,7 @@
               font-size: .88rem;
               min-height: 2.2rem;
             }
+
           }
         }
       }

@@ -22,9 +22,9 @@ EDIT ./proxy/proxy.const.mjs to:
   
     export const PROXY_TARGET = environments['example']; 
 
+Run: `npm run start:proxy`
 
-View site in Chrome with installed extension Angular DevTools
-  at:  http://localhost:4201/nde/home?vid=01UNCSL_UNCW:DEV01
+View site at:  http://localhost:4201/nde/home?vid=01UNCSL_UNCW:DEV01
 
 
 

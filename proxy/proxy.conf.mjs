@@ -2,11 +2,6 @@ import {PROXY_TARGET} from "./proxy.const.mjs";
 import {customizationConfigOverride} from "./customization_config_override.mjs";
 import {deepMerge} from "./proxy-utils.mjs";
 
-
-
-
-
-
 const proxyRules = [
   {
     context: [
@@ -64,6 +59,14 @@ const proxyRules = [
 
   },
   {
+    context: ['/nde/homepage.css'],
+    target: 'not-needed',
+    router: (req) => `${req.protocol}://${req.get('host')}`,
+    changeOrigin: false,
+    logLevel: 'debug',
+    pathRewrite: { '^/nde/homepage.css': '/assets/homepage/homepage.css' },
+  },
+  {
     context: [
       '**', '!/nde/custom/**'
     ],
@@ -74,7 +77,5 @@ const proxyRules = [
 
   }
 ];
-
-
 
 export default proxyRules;
