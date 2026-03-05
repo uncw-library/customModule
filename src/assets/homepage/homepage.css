@@ -1,8 +1,5 @@
-// SASS format
-
-@use "src/app/styles/nde-variables" as vars;
-@use "src/app/styles/nde-mixing" as mixing;
-
+/* Sass Format */
+  
 .main-landing-page {
   width: vars.$responsiveWidth;
   @include vars.set-responsive-width;
@@ -24,8 +21,6 @@
       li {
 
         a {
-          color: #000 !important;
-          text-decoration: underline !important;
           background-color: var(--sys-inverse-on-surface);
           display: flex;
           padding: 1rem;
@@ -38,19 +33,13 @@
           cursor: pointer;
           height: 100%;
 
-          &:hover {
-            color: #002d5b !important;
-            text-decoration: none !important;
-          }
-
           @include mixing.respond-to('large', 'xlarge') {
-
             &:hover, &:focus {
-            transition: box-shadow .3s, transform .3s ease-in-out;
-            box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-            transform: translateY(-1.1875rem);
+              transition: box-shadow .3s, transform .3s ease-in-out;
+              box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+              transform: translateY(-1.1875rem);
+            }
           }
-
 
           .icon {
             background-color: var(--sys-inverse-on-surface);
@@ -96,7 +85,6 @@
               font-size: .88rem;
               min-height: 2.2rem;
             }
-
           }
         }
       }
@@ -164,6 +152,7 @@
       }
     }
 
+
     .announcements {
       background-color: var(--sys-inverse-on-surface);
       padding: 1.5rem;
@@ -171,7 +160,6 @@
       border: .0625rem solid var(--sys-primary);
       max-width: 32.6875rem;
       gap:1rem;
-
 
       @include mixing.respond-to('small', 'xsmall') {
         padding: 1rem;
@@ -183,7 +171,6 @@
         font-size: vars.$mediumFontSize;
         font-weight: vars.$normal;
         line-height: 2rem;
-
       }
 
       .announcements-item-title {
@@ -192,6 +179,23 @@
         @include mixing.respond-to('medium', 'small', 'xsmall') {
           font-size: vars.$largeFontSize;
         }
+      }
+
+      article {
+        .mat-body-large {
+          .help-link {
+            color: #000 !important;
+            text-decoration: underline !important;
+          }
+          .help-link:hover {
+            color: #002d5b !important;
+            text-decoration: none !important;
+          }
+        }
+      }
+      .help-link:hover {
+        color: #002d5b !important;
+        text-decoration: none !important;
       }
     }
   }
@@ -275,7 +279,4 @@
       }
     }
   }
-
 }
-
-

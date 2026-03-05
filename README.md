@@ -26,6 +26,7 @@ Run: `npm run start:proxy`
 
 View site at:  http://localhost:4201/nde/home?vid=01UNCSL_UNCW:DEV01
 
+Examples:  https://github.com/ExLibrisGroup/customModuleExamples
 
 
 ## ✨ New Feature (9th November 2025): Support for all customization files in assets folder:
