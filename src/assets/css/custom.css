@@ -7,3 +7,9 @@ a.homepage-link-box:hover{
     color: #002d5b;
     text-decoration: none;
 } */
+img[src*="library-logo"] {
+    width: 0;
+    height: 0;
+    padding: 0;
+    display: none;
+}
