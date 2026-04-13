@@ -26,16 +26,14 @@ export class LibAnswersChatComponent implements OnInit {
 
     // a moment after loaded, do a click on the button to open the window (to default it to open)
     lc.addEventListener('load', () => {
-      setTimeout(() => {
-        const observer = new MutationObserver(() => {
-          const btn = document.getElementById('lcs_slide_out_button-27127') as HTMLElement | null;
-          if (btn) {
-            btn.click();
-            observer.disconnect();
-          }
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-      }, 5000);
+      const observer = new MutationObserver(() => {
+        const btn = document.getElementById('lcs_slide_out_button-27127') as HTMLElement | null;
+        if (btn) {
+          observer.disconnect();
+          btn.click()
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
     });
 
     const s = document.getElementsByTagName('script')[0];
