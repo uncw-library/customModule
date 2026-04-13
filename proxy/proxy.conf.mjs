@@ -74,7 +74,12 @@ const proxyRules = [
     secure: true,
     changeOrigin: true,
     logLevel: 'debug',
-
+    onProxyRes(proxyRes) {
+      // Strip CSP in local dev so third-party scripts (e.g. LibAnswers chat) load.
+      // This only affects the local proxy — never runs in production.
+      delete proxyRes.headers['content-security-policy'];
+      delete proxyRes.headers['content-security-policy-report-only'];
+    },
   }
 ];
 
