@@ -13,7 +13,7 @@ function updateStyle(): void {
     if (!existing) {
       const style = document.createElement('style');
       style.id = STYLE_ID;
-      style.textContent = 'mat-snack-bar-container.mdc-snackbar { opacity: 0 !important; }';
+      style.textContent = 'mat-snack-bar-container.mdc-snackbar { display: none !important; }';
       document.head.appendChild(style);
     }
   } else {
