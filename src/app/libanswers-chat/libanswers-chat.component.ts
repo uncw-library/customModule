@@ -24,13 +24,13 @@ export class LibAnswersChatComponent implements OnInit {
       protocol +
       'uncw.libanswers.com/load_chat.php?hash=c29df0495cb2f734e42785dbb34e4d07ed30d46dcae5f249a035fcac5f3a4581';
 
-    // a moment after loaded, do a click on the button to open the window (to default it to open)
+    // after loaded, do a click on the button to open the window (to default it to open)
     lc.addEventListener('load', () => {
       const observer = new MutationObserver(() => {
         const btn = document.getElementById('lcs_slide_out_button-27127') as HTMLElement | null;
         if (btn) {
+          btn.click();
           observer.disconnect();
-          btn.click()
         }
       });
       observer.observe(document.body, { childList: true, subtree: true });
