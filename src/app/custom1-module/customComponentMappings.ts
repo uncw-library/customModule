@@ -5,7 +5,7 @@ import { HideLoginSnackbarComponent } from "../hide-login-snackbar/hide-login-sn
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
     ['nde-header-top', UncwHeaderComponent],
-    ['nde-header-after', LibAnswersChatComponent],
+    // ['nde-header-after', LibAnswersChatComponent],
     ['nde-header-before', HideLoginSnackbarComponent],
 
 ]);
