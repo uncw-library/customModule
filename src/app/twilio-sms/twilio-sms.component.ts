@@ -18,17 +18,15 @@ export class TwilioSMSComponent implements OnInit {
     const locations = document.querySelectorAll('nde-location');
     if (!locations.length) return;
 
-    const bookTitle = document.querySelector('.record-title a')?.textContent?.trim() ?? '';
-
     locations.forEach(location => {
       if (location.querySelector('[data-uncw-sms-button]')) return;
 
+      const bookTitle = document.querySelector('.record-title a')?.textContent?.trim() ?? '';
+      const bookLocation = location.querySelector('[data-qa="location-sub-location"]')?.textContent?.trim() ?? '';
       const callNumber = location.querySelector('[data-qa="location-call-number"]')?.textContent?.trim() ?? '';
-      const bookLocation = location.querySelector('.getit-library-title')?.textContent?.trim() ?? '';
 
       const btn = this.createSmsButton(bookTitle, bookLocation, callNumber);
 
-      // Insert next to "Find It" if it exists, otherwise append to the accordion-header
       const findItContainer = location.querySelector('.flex-row.flex-layout-center.gap-1.height-100') as HTMLElement | null;
       if (findItContainer) {
         findItContainer.style.flexDirection = 'column';
