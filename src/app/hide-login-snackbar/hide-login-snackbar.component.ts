@@ -24,8 +24,11 @@ function updateStyle(): void {
 @Component({
   selector: 'custom-hide-login-snackbar',
   standalone: true,
-  template: '',
+  imports: [],
+  templateUrl: './hide-login-snackbar.component.html',
+  styleUrl: './hide-login-snackbar.component.scss'
 })
+
 export class HideLoginSnackbarComponent implements OnInit, OnDestroy {
   private origPushState!: typeof history.pushState;
   private origReplaceState!: typeof history.replaceState;
