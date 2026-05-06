@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'custom-libanswers-chat',
   standalone: true,
-  template: '',
+  imports: [],
+  templateUrl: './libanswers-chat.component.html',
+  styleUrl: './libanswers-chat.component.scss'
 })
+
 export class LibAnswersChatComponent implements OnInit {
   ngOnInit(): void {
     if (document.querySelector('script[data-libanswers-chat]')) {
